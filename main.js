@@ -1,3 +1,42 @@
 const si = require ('systeminformation')
+const readline = require ('readline');
+const { clear } = require('console');
 
-console.log ("Hello! Welcome to GSI. This was made to simply display information about the system and expand in js.")
+/// Hello Message
+helloMessage()
+
+/// Create redline interface.
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
+
+
+
+/// Main Functions
+
+function helloMessage() {
+    console.log("Welcome to GSI! This is the welcome page!")
+}
+
+/// Getting User Input
+
+
+function getUserInput() {
+    rl.question("", (userInput) => {
+        clear()
+        switch (userInput.trim()) {
+            case '1':
+                totalMemInfo()
+                displayTotalMem();
+                break
+            default:
+                console.log("Invalid input. Please press 1 or 2.");
+        }
+        rl.close();
+    });
+}
+
+getUserInput();

@@ -2,6 +2,9 @@ const si = require('systeminformation')
 const readline = require ('readline');
 const { clear } = require('console');
 
+/// Hello Message
+helloMessage()
+
 
 /// Create Readline Interface
 const rl = readline.createInterface({
@@ -27,6 +30,10 @@ function memInfo () {
 
 function totalMemInfo () {
     console.log ("Getting your Memory Info...")
+}
+
+function helloMessage () {
+    console.log ("Welcome to the memory section!")
 }
 
 /// Getting your input.
