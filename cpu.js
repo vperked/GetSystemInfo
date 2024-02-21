@@ -24,7 +24,6 @@ function displayCPUCache () {
     si.cpuCurrentSpeed()
     .then (data => console.log(data))
     .catch (error => console.error(error))
-    homeScreen()
 }
 
 function displayCPUinfo() {
