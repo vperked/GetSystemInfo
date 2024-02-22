@@ -3,15 +3,18 @@
 This project was made to help me learn JS and improve, its not alot but. Its my first "real" project. 
 
 ```
-To install simply run:
-git clone https://github.com/vperked/GetSystemInfo
-```
-
-
-```
+PLEASE INSTALL THESE FIRST TO AVOID ISSUES!!!
 Packages:
 npm instal chalk
 npm install clear
 npm install systeminformation
 npm install readline
 ```
+
+```
+To install simply run:
+git clone https://github.com/vperked/GetSystemInfo
+run node main in the folder to get information on the commands and much more!
+```
+
+
