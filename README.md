@@ -5,5 +5,12 @@ This project was made to help me learn JS and improve, its not alot but. Its my 
 ```
 To install simply run:
 git clone https://github.com/vperked/GetSystemInfo
-then node main.js to see the options.
+```
+
+
+```
+Packages:
+npm instal chalk
+npm install clear
+npm install systeminformation
 ```
