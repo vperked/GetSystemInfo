@@ -1,7 +1,7 @@
-const si = require('systeminformation')
-const readline = require ('readline');
-const { clear } = require('console');
-
+import si from 'systeminformation'
+import readline from 'readline'
+import clear from 'clear'
+import chalk from 'chalk'
 /// Hello Message
 helloMessage()
 
@@ -45,13 +45,21 @@ function helloMessage(){
     console.log("Welcome to the Network Commands Section!")
 }
 
+function networkStats(interval) {
+    setInterval(function() {
+        si.networkStats().then (data => {
+            console.log(data);
+        });
+    }, interval);
+}
 
 
 
+ 
 /// Getting your input
 
 function getUserInput() {
-    rl.question("Press 1 to look at your machines current Load. ", (userInput) => {
+    rl.question("Press 1 to bring up your Machines current Load, Press 2 to get current machine connections, Press 3 to get your network stats: ", (userInput) => {
         clear()
         switch (userInput.trim()) {
             case '1':
@@ -62,6 +70,10 @@ function getUserInput() {
             case '2':
                 machineConnections()
                 allUsers()
+                clear
+                break
+            case '3':
+                networkStats(2000)
                 clear
                 break
             default:
