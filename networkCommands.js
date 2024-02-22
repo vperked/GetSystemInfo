@@ -3,8 +3,12 @@ import readline from 'readline'
 import clear from 'clear'
 import chalk from 'chalk'
 import { count } from 'console'
+
+
+/// Storing Stuff...
 const error = chalk.bold.red
 const Message = chalk.green
+
 /// Hello Message
 helloMessage()
 
