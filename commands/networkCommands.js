@@ -56,7 +56,7 @@ function helloMessage(){
     console.log(Message("Welcome to the Network Commands Section!"));
 }
 
-function networkstatsMessage () {
+function networkStatsMessage () {
     console.log(Message("Getting your network stats..."))
 }
  
@@ -87,7 +87,7 @@ function getUserInput() {
                 clear
                 break
             case '3':
-                networkstatsMessage()
+                networkStatsMessage()
                 networkStats(2000)
                 clear
                 break
