@@ -69,11 +69,14 @@ function getUserInput() {
                 break;
             default:
                 console.log("Invalid input. Please press 1,2 or 3.");
+            }
+            if (userInput.trim().toLowerCase() !== 'exit') {
+                   getUserInput();
+            } else {
+               rl.close();
+           }
+           });
         }
-
-        rl.close();
-    });
-}
 
 getUserInput();
 

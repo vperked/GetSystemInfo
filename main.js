@@ -79,15 +79,17 @@ function getUserInput() {
                 pingMessage()
                 ping()
                 keepGoing()
+                clear
                 break
             case '2':
                 diskMessage()
                 diskLayout()
+                clear
+                break
             default:
                 console.log(error("Invalid input. Please press 1 or 2."));
                 console.log(chalk.blue("Or input exit to exit."))
         }
-        
      if (userInput.trim().toLowerCase() !== 'exit') {
             getUserInput();
      } else {

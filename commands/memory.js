@@ -51,9 +51,12 @@ function getUserInput() {
             break
             default:
                 console.log("Invalid input. Please press 1 or 2.");
+            }
+            if (userInput.trim().toLowerCase() !== 'exit') {
+                   getUserInput();
+            } else {
+               rl.close();
+           }
+           });
         }
-        rl.close();
-    });
-}
-
 getUserInput();
