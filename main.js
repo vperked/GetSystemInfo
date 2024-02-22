@@ -31,20 +31,29 @@ function keepGoing () {
     }, 1000)
 }
 
-
 function ping () {
     si.inetLatency(`${ip}`)
-    .then (data => console.log (data));
+    .then (data => {
+        if (data === null) {
+            console.log(error("IP is invalid or null."))
+        } else {
+            console.log(data);
+        }
+    })
+    .catch (error => {
+        console.log(error("Error!"))
+    })
 }
 
 function pingMessage () {
     console.log (chalk.yellow( `Awaiting response from ${ip}`))
-
+    console.log (error())
 }
 
 
 /// Storage
-let ip = "1.1.1.1" 
+let ip = "1.1.1.1"
+const error = chalk.red
 
 /// Getting User Input
 
