@@ -30,11 +30,12 @@ function allUsers () {
 }
 
 
-
-function currentLoad() {
-    si.currentLoad()
-    .then (data => console.log(data))
-    .catch(error => console.error(error));
+function currentLoad(interval) {
+setInterval(function() {
+    si.currentLoad(). then (data => {
+        console.log(data);
+    });
+}, interval);
 }
 
 function currentLoadMessage () {
@@ -54,12 +55,11 @@ function networkStats(interval) {
 }
 
 
-
  
 /// Getting your input
 
 function getUserInput() {
-    rl.question("Press 1 to bring up your Machines current Load, Press 2 to get current machine connections, Press 3 to get your network stats: ", (userInput) => {
+    rl.question("Press 1 to bring up your Machines current Load, Press 2 to get current machine connections & Active users, Press 3 to get your network stats: ", (userInput) => {
         clear()
         switch (userInput.trim()) {
             case '1':
@@ -68,7 +68,7 @@ function getUserInput() {
                 clear
                 break;
             case '2':
-                machineConnections()
+                machineConnections(3000)
                 allUsers()
                 clear
                 break
