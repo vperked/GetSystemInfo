@@ -1,7 +1,7 @@
-const si = require('systeminformation')
-const readline = require ('readline');
-const { clear } = require('console');
-
+import si from 'systeminformation'
+import chalk from 'chalk'
+import clear from 'clear'
+import readline from 'readline'
 /// Hello Message
 helloMessage()
 
@@ -11,6 +11,8 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 })
+
+
 
 /// Main Functions
 
@@ -29,12 +31,17 @@ function memInfo () {
 
 
 function totalMemInfo () {
-    console.log ("Getting your Memory Info...")
+    console.log (chalk.yellow("Displaying Total Memory..."))
 }
 
 function helloMessage () {
-    console.log ("Welcome to the memory section!")
+    console.log (chalk.blue("Welcome to the Memory section!"))
 }
+
+function meminfoMessage() {
+    console.log (chalk.yellow("Getting Memory Info..."))
+}
+/// Storage
 
 /// Getting your input.
 
@@ -47,10 +54,11 @@ function getUserInput() {
                 displayTotalMem();
                 break
             case '2':
+            meminfoMessage();
             memInfo();
             break
             default:
-                console.log(error("Invalid input,closing. please input 1 or 2 next time!"));
+                console.log(chalk.red("Invalid input,closing. please input 1 or 2 next time!"));
             }
             rl.close();
         });
