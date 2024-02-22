@@ -58,26 +58,24 @@ function getUserInput() {
             case '1':
                 CPUspeedMessage()
                 displayCPUSpeed()
+                clear
                 break;
             case '2':
                 CPUInfoMessage()
                 displayCPUinfo();
+                clear
                 break;
                 case '3':
                 CPUCacheInfoMessage() 
                 displayCPUCache();
+                clear
                 break;
             default:
-                console.log("Invalid input. Please press 1,2 or 3.");
+                console.log(error("Invalid input,closing. please input 1,2 or 3 next time!"));
             }
-            if (userInput.trim().toLowerCase() !== 'exit') {
-                   getUserInput();
-            } else {
-               rl.close();
-           }
-           });
-        }
-
+            rl.close();
+        });
+    }
 getUserInput();
 
 /// End

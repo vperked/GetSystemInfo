@@ -50,13 +50,9 @@ function getUserInput() {
             memInfo();
             break
             default:
-                console.log("Invalid input. Please press 1 or 2.");
+                console.log(error("Invalid input,closing. please input 1 or 2 next time!"));
             }
-            if (userInput.trim().toLowerCase() !== 'exit') {
-                   getUserInput();
-            } else {
-               rl.close();
-           }
-           });
-        }
+            rl.close();
+        });
+    }
 getUserInput();

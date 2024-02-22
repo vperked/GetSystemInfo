@@ -92,11 +92,10 @@ function getUserInput() {
                 clear
                 break
             default:
-                console.log(error("Invalid input. Please press 1, 2 or 3."));
-        }
-
-        rl.close();
-    });
-}
-
+                console.log(error("Invalid input,closing. please input 1,2 or 3 next time!"));
+            }
+            rl.close();
+        });
+    }
+    
 getUserInput()
