@@ -2,7 +2,6 @@ import si from 'systeminformation'
 import readline from 'readline'
 import clear from 'clear'
 import chalk from 'chalk'
-import { count } from 'console'
 
 
 /// Storing Stuff...

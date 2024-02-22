@@ -1,7 +1,6 @@
-const si = require ('systeminformation')
-const readline = require ('readline');
-const { clear } = require('console');
-
+import si from 'systeminformation'
+import clear from 'clear'
+import readline from 'readline'
 
 /// NOTE TO SELF: FIGURE OUT IF YOU WANT TO IMPORT COMMANDS AND EXECUTE THEM HERE OR JUST EXECUTE THE INDIVIDUAL COMMANDS!!!!!!!!!!!!!!!!!!!!!
 
