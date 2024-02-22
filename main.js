@@ -2,6 +2,7 @@ import si from 'systeminformation'
 import clear from 'clear'
 import readline from 'readline'
 import chalk from 'chalk'
+import { get } from 'http'
 
 /// NOTE TO SELF: FIGURE OUT IF YOU WANT TO IMPORT COMMANDS AND EXECUTE THEM HERE OR JUST EXECUTE THE INDIVIDUAL COMMANDS!!!!!!!!!!!!!!!!!!!!!
 
@@ -16,6 +17,8 @@ const rl = readline.createInterface({
     input: process.stdin, 
     output: process.stdout
 })
+
+
 
 /// Main Functions
 
@@ -50,6 +53,15 @@ function pingMessage () {
     console.log (error())
 }
 
+function diskLayout () {
+    si.diskLayout()
+    .then (data => console.log(data)) 
+}
+
+function diskMessage() {
+    console.log(chalk.green("Getting Drive Info..."))
+}
+
 /// END
 
 /// Storage
@@ -68,11 +80,20 @@ function getUserInput() {
                 ping()
                 keepGoing()
                 break
+            case '2':
+                diskMessage()
+                diskLayout()
             default:
-                console.log("Invalid input. Please press 1 or 2.");
+                console.log(error("Invalid input. Please press 1 or 2."));
+                console.log(chalk.blue("Or input exit to exit."))
         }
+        
+     if (userInput.trim().toLowerCase() !== 'exit') {
+            getUserInput();
+     } else {
         rl.close();
+    }
     });
 }
 
-getUserInput();
+getUserInput()
