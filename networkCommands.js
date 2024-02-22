@@ -2,8 +2,9 @@ import si from 'systeminformation'
 import readline from 'readline'
 import clear from 'clear'
 import chalk from 'chalk'
+import { count } from 'console'
 const error = chalk.bold.red
-
+const Message = chalk.green
 /// Hello Message
 helloMessage()
 
@@ -41,13 +42,21 @@ setInterval(function() {
 }
 
 function currentLoadMessage () {
-    console.log("Getting your current load...")
+    console.log(Message("Getting your current load..."));
+}
+
+function consMessage () {
+    console.log(Message("Getting Connections & Users..."))
 }
 
 function helloMessage(){
-    console.log("Welcome to the Network Commands Section!")
+    console.log(Message("Welcome to the Network Commands Section!"));
 }
 
+function networkstatsMessage () {
+    console.log(Message("Getting your network stats..."))
+}
+ 
 function networkStats(interval) {
     setInterval(function() {
         si.networkStats().then (data => {
@@ -55,8 +64,6 @@ function networkStats(interval) {
         });
     }, interval);
 }
-
-
 
  
 /// Getting your input
@@ -67,15 +74,17 @@ function getUserInput() {
         switch (userInput.trim()) {
             case '1':
                 currentLoadMessage()
-                currentLoad()
+                currentLoad(10000)
                 clear
                 break;
             case '2':
-                machineConnections(3000)
-                allUsers()
+                consMessage()
+                machineConnections(10000)
+                allUsers(5000)
                 clear
                 break
             case '3':
+                networkstatsMessage()
                 networkStats(2000)
                 clear
                 break
