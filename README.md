@@ -13,4 +13,5 @@ Packages:
 npm instal chalk
 npm install clear
 npm install systeminformation
+npm install readline
 ```
