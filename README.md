@@ -4,11 +4,12 @@ This project was made to help me learn JS and improve, its not alot but. Its my 
 
 ```
 PLEASE INSTALL THESE FIRST TO AVOID ISSUES!!!
+Please run npm install.
 Packages:
-npm instal chalk
-npm install clear
-npm install systeminformation
-npm install readline
+chalk
+clear
+systeminformation
+readline
 ```
 
 ```
