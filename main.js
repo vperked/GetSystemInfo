@@ -50,6 +50,7 @@ function pingMessage () {
     console.log (error())
 }
 
+/// END
 
 /// Storage
 let ip = "1.1.1.1"
