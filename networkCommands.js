@@ -2,6 +2,8 @@ import si from 'systeminformation'
 import readline from 'readline'
 import clear from 'clear'
 import chalk from 'chalk'
+const error = chalk.bold.red
+
 /// Hello Message
 helloMessage()
 
@@ -55,6 +57,7 @@ function networkStats(interval) {
 }
 
 
+
  
 /// Getting your input
 
@@ -77,7 +80,7 @@ function getUserInput() {
                 clear
                 break
             default:
-                console.log("Invalid input. Please press 1");
+                console.log(error("Invalid input. Please press 1, 2 or 3."));
         }
 
         rl.close();
