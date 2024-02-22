@@ -25,7 +25,8 @@ const rl = readline.createInterface({
 function helloMessage() {
     console.log(chalk.blue.bold("Welcome to GSI! This is the welcome page!"));
     console.log(chalk.red("This project was made to improve my backend skills, in the commands folder is where all the active functions are."))
-    console.log(chalk.green.bold("This file has basic things, input numbers 1,2 or 3 to find out what hidden features there are."))
+    console.log(chalk.blueBright("To use the commands, open a command prompt in /commands or cd into it and simply run node commandname."))
+    console.log(chalk.green.bold("This file has basic things, input numbers 1 or 2 to find out what hidden features there are."))
 }
 
 function keepGoing () {
@@ -87,15 +88,12 @@ function getUserInput() {
                 clear
                 break
             default:
-                console.log(error("Invalid input. Please press 1 or 2."));
-                console.log(chalk.blue("Or input exit to exit."))
-        }
-     if (userInput.trim().toLowerCase() !== 'exit') {
-            getUserInput();
-     } else {
-        rl.close();
+                console.log(error("Invalid input, exiting."));
+                console.log(chalk.blue("Trying using 1 or 2 next time?"))
     }
-    });
+    rl.close();
+});
 }
+
 
 getUserInput()
