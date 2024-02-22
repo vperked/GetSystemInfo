@@ -31,15 +31,20 @@ function keepGoing () {
     }, 1000)
 }
 
+
 function ping () {
-    si.inetLatency('1.1.1.1')
+    si.inetLatency(`${ip}`)
     .then (data => console.log (data));
 }
 
 function pingMessage () {
-    console.log (chalk.yellow("Pinging 1.1.1.1..."))
+    console.log (chalk.yellow( `Awaiting response from ${ip}`))
 
 }
+
+
+/// Storage
+let ip = "1.1.1.1" 
 
 /// Getting User Input
 
