@@ -27,6 +27,7 @@ function helloMessage() {
 
 function keepGoing () {
     setInterval(() => {
+        ping();
     }, 1000)
 }
 
@@ -36,7 +37,8 @@ function ping () {
 }
 
 function pingMessage () {
-    console.log (chalk.yellow("Getting your latency to 1.1.1.1..."))
+    console.log (chalk.yellow("Pinging 1.1.1.1..."))
+
 }
 
 /// Getting User Input
