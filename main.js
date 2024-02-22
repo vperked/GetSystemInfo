@@ -17,12 +17,11 @@ const rl = readline.createInterface({
 })
 
 
-
-
 /// Main Functions
 
 function helloMessage() {
     console.log("Welcome to GSI! This is the welcome page!")
+    console.log("This project was made to improve my backend skills, in the commands folder is where all the active functions are.")
 }
 
 /// Getting User Input
