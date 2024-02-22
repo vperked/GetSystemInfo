@@ -1,9 +1,10 @@
-const si = require('systeminformation')
-const readline = require ('readline');
-const { clear } = require('console');
+import si from 'systeminformation'
+import readline from 'readline'
+import clear from 'clear'
+import chalk from 'chalk'
 
 /// Welcome Message!
-console.log("Welcome to the CPU section of GSI!")
+helloMessage()
 
 /// Create Readline Interface
 
@@ -33,23 +34,26 @@ function displayCPUinfo() {
 }
 
 function CPUspeedMessage () {
-    console.log ("Getting your CPU Speed...");
+    console.log (chalk.green("Getting your CPU Speed..."));
 }
 
 function CPUInfoMessage () {
-    console.log ("Getting your CPU Info...");
+    console.log (chalk.green("Getting your CPU Info..."));
 }
 
 function CPUCacheInfoMessage () {
-    console.log ("Getting your CPU Cache...")
+    console.log (chalk.green("Getting your CPU Cache..."));
 } 
 
+function helloMessage () {
+    console.log (chalk.greenBright("Hello! Welcome to the CPU Section of GSI."))
+}
 
 /// Getting your input.
 
 function getUserInput() {
     rl.question("Press 1 to bring up your CPU Speed, Press 2 to bring up info about your CPU, Press 3 to bring up your current CPU cache. ", (userInput) => {
-        clear()
+        clear() 
         switch (userInput.trim()) {
             case '1':
                 CPUspeedMessage()

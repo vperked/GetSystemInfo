@@ -2,6 +2,11 @@ const si = require ('systeminformation')
 const readline = require ('readline');
 const { clear } = require('console');
 
+
+/// NOTE TO SELF: FIGURE OUT IF YOU WANT TO IMPORT COMMANDS AND EXECUTE THEM HERE OR JUST EXECUTE THE INDIVIDUAL COMMANDS!!!!!!!!!!!!!!!!!!!!!
+
+
+
 /// Hello Message
 helloMessage()
 
