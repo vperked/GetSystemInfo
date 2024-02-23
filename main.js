@@ -4,9 +4,6 @@ import readline from 'readline'
 import chalk from 'chalk'
 import { get } from 'http'
 
-/// NOTE TO SELF: FIGURE OUT IF YOU WANT TO IMPORT COMMANDS AND EXECUTE THEM HERE OR JUST EXECUTE THE INDIVIDUAL COMMANDS!!!!!!!!!!!!!!!!!!!!!
-
-
 
 /// Hello Message
 helloMessage()
